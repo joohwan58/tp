@@ -1,0 +1,2 @@
+Food name: chicken, category: MEAT, expiry: 20-03-2021, stored in: FREEZER
+Food name: milk, category: OTHER, expiry: 18-03-2021, stored in: FRIDGE_DOOR

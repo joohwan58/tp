@@ -17,6 +17,7 @@ public class AddCommand extends Command {
     public AddCommand(String foodName, FoodCategory category, String expiryString,
             FoodStorageLocation location) throws InvalidDateException {
         this.foodToAdd = new Food(category, foodName, expiryString, location);
+
     }
 
     @Override
@@ -26,6 +27,7 @@ public class AddCommand extends Command {
     }
 
     private void addFood() {
+        assert foodToAdd != null : "Unable to add a null food";
         fridge.add(foodToAdd);
     }
 

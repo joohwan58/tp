@@ -17,7 +17,6 @@ public class SearchCommand extends Command {
         if (foodName.isEmpty()) {
             throw new EmptyDescriptionException();
         }
-
         this.foodName = foodName;
     }
 
@@ -52,6 +51,7 @@ public class SearchCommand extends Command {
     }
 
     private int getIndexOfFoodStored() {
+        assert !foodName.equals(null) : "Unable to search a null food name";
         for (int i = 0; i < fridge.getSize(); i += 1) {
             Food food = fridge.getFood(i);
             if (food.getFoodName().equals(foodName)) {

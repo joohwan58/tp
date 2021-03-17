@@ -30,7 +30,7 @@ public class RemoveCommand extends Command {
         showResults();
     }
 
-    public void removeFood() throws InvalidIndexException {
+    private void removeFood() throws InvalidIndexException {
         try {
             this.foodToBeRemoved = fridge.getFood(indexToRemove);
         } catch (Exception e) {
